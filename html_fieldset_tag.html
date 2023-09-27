@@ -1,0 +1,42 @@
+<!-- fieldset tag is used within a form tag and used to group related elements by enclosing them within a box -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fieldset element usage</title>
+</head>
+<body>
+	<h1>Fieldset Element Usage</h1>
+
+	<form>
+		<fieldset name="PersonalDetails">
+			<label for="fname">First name:</label>
+			<input type="text" id="fname" name="fname"> </br>
+			<label for="lname">Last name:</label>
+			<input type="text" id="lname" name="lname"> </br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"> </br>
+			<label for="phone">Phone number:</label>
+			<input type="phone" id="phone" name="phone"> </br>
+		</fieldset>
+
+		<br>
+
+		<fieldset name="ProfessionalDetails">
+			<label for="occupation">Occupation:</label>
+			<input type="text" id="occupation" name="occupation"> </br>
+			<label for="company">Company:</label>
+			<input type="text" id="company" name="company"> </br>
+			<label for="start">Start Date:</label>
+			<input type="Date" id="start" name="start"> </br>
+			<label for="end">End Date:</label>
+			<input type="Date" id="end" name="end">
+		</fieldset>
+
+		<br>
+	</form>
+	<input type="submit" value="Submit">
+</body>
+</html>
