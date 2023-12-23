@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+/*Creating fixed nav bar for regular sized devices using flex display*/
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+#navbar{
+    display: flex;
+    flex: 0 0 290px; /* set flex: none for fixed size */
+    flex-direction: column;
+}
+
+#navbar header{
+    text-align: center;
+    padding: 15px 5px;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #4d4e53;
+}
+
+#navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link{
+    display: block;
+    color: #4d4e53;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.nav-link:not(:last-of-type){
+    border-bottom: 1px solid #4d4e53;
+}
+
+#main-doc header{
+    font-size: 1.8rem;
+}
+
+#main-doc{
+    border-left: 2px solid rgba(0, 22, 22, 0.4);
+    height: 100%;
+    overflow: auto;
+    padding: 40px;
+}
+
+.main-section{
+    margin-bottom: 40px;
+}
+
+.main-section>*:not(:first-child){
+    padding-left: 20px;
+    font-size: 0.95em;
+    color: #4d4e53;
+}
+
+.main-section ul, ul+p, .main-section ol{
+    margin-left: 40px;
+}
+
+.main-section li{
+    margin-bottom: 10px;
+}
+
+code{
+    background-color: #bec0c2;
+    color: black;
+    padding: 2px 4px;
+}
+
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+      border: 1px solid;
+      height: 207px;
+    }
+  
+    #navbar {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-height: 275px;
+      border: none;
+      z-index: 1;
+      border-bottom: 2px solid;
+    }
+  
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 270px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    #main-doc {
+      margin-left: -10px;
+    }
+  
+    code {
+      margin-left: -20px;
+      width: 100%;
+      padding: 15px;
+      padding-left: 10px;
+      padding-right: 45px;
+      min-width: 233px;
+    }
+  }
+  
